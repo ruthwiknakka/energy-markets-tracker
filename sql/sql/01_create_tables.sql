@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS spot_prices (
     period             DATE          NOT NULL,
     series             TEXT          NOT NULL,
     series_description TEXT,
-    value              NUMERIC(10,2),
+    value              NUMERIC(10,4),
     units              TEXT,
     loaded_at          TIMESTAMPTZ   DEFAULT now(),
     PRIMARY KEY (period, series)

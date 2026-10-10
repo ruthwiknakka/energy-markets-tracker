@@ -14,7 +14,12 @@ def fetch_prices(start="2024-01-01"):
         "api_key": os.getenv("EIA_API_KEY"),
         "frequency": "daily",
         "data[0]": "value",
-        "facets[series][]": ["RBRTE", "RWTC"],
+                "facets[series][]": [
+            "RBRTE",
+            "RWTC",
+            "EER_EPMRU_PF4_RGC_DPG",
+            "EER_EPD2DXL0_PF4_RGC_DPG",
+        ],
         "start": start,
         "sort[0][column]": "period",
         "sort[0][direction]": "asc",
